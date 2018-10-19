@@ -1,6 +1,6 @@
 # MBA - Chat
 
-Criando um chat atráves do Ionic e utilizando o firabase realtime para armazenar as mensagens 
+Criando um chat atráves do Ionic e utilizando o firebase realtime para armazenar as mensagens 
 
 Executar:
 ```sh
