@@ -1,0 +1,7 @@
+{
+  "name": "MBAchat",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
