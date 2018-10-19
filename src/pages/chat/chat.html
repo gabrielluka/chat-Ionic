@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      MBA - Chat
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let chat of chats" no-lines>
+      <div>
+        <div class="chat-message" text-right *ngIf="chat.usuario === nome">
+          <div class="right-bubble">
+            <span class="msg-name">Você</span>
+            <span class="msg-date">{{chat.data | date:'short'}}</span>
+            <p text-wrap>{{chat.message}}</p>
+          </div>
+        </div>
+        <div class="chat-message" text-left *ngIf="chat.usuario !== nome">
+          <div class="left-bubble">
+            <span class="msg-name">{{chat.usuario}}</span>
+            <span class="msg-date">{{chat.data | date:'short'}}</span>
+            <p text-wrap>{{chat.message}}</p>
+          </div>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-10>
+        <ion-input type="text" placeholder="Digite uma mensagem" [(ngModel)]="data.message" name="message"></ion-input>
+      </ion-col>
+      <ion-col col-2 (click)="enviarMensagem()">
+        <button ion-fab> <ion-icon color="light" name="send"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
